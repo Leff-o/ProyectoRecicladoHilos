@@ -1,42 +1,31 @@
 package edu.uptc.logica;
 
-public class Usuario extends Persona {
-	
-	private String direccion;
-	private String ciudad;
-	private String departamento;
-	
-	public Usuario(String nombre, String apellido, String telefono, String usuario, String contraseña,String direccion,String ciudad,String departamento) {
-		super(nombre, apellido, telefono, usuario, contraseña);
-		
-		this.direccion=direccion;
-		this.ciudad=ciudad;
-		this.departamento=departamento;
+public class Usuario {
+
+	private String nombre;
+	private String cedula;
+
+	public Usuario(String nombre, String cedula) {
+		this.nombre = nombre;
+		this.cedula = cedula;
 	}
 
-	public String getDireccion() {
-		return direccion;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public String getCiudad() {
-		return ciudad;
+	public String getCedula() {
+		return cedula;
 	}
 
-	public void setCiudad(String ciudad) {
-		this.ciudad = ciudad;
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
 	}
 
-	public String getDepartamento() {
-		return departamento;
-	}
-
-	public void setDepartamento(String departamento) {
-		this.departamento = departamento;
-	}
 	
 	
 }

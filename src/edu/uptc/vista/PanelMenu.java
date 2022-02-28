@@ -13,7 +13,6 @@ import edu.uptc.control.Control;
 
 public class PanelMenu extends JPanel{
 
-	private JButton btnOpcionUno;
 	private JButton btnOpcionDos;
 	private JButton btnOpcionTres;
 
@@ -28,29 +27,23 @@ public class PanelMenu extends JPanel{
 	}
 
 	private void inicializar() {
-		btnOpcionUno = new JButton("Usuario");
-		btnOpcionUno.setFont(new Font("OCR A Extended",Font.PLAIN,14));
-		btnOpcionUno.setBounds(47, 35, 100, 30);
-		
+
 		btnOpcionDos= new JButton("Empleado");
 		btnOpcionDos.setFont(new Font("OCR A Extended",Font.PLAIN,14));
 		btnOpcionDos.setBounds(47, 85, 100, 30);
 		
-		btnOpcionTres= new JButton("Administrador");
+		btnOpcionTres= new JButton("CLIENTE");
 		btnOpcionTres.setFont(new Font("OCR A Extended",Font.PLAIN,14));
 		btnOpcionTres.setBounds(27, 135, 138, 30);
 	}
 
 	private void agregar() {
-		
-		add(btnOpcionUno);
+
 		add(btnOpcionDos);
 		add(btnOpcionTres);
 	}
 	
 	public void asignarListener(Control control) {
-		btnOpcionUno.setActionCommand(Acciones.IN_USUARIO);
-		btnOpcionUno.addActionListener(control);
 		btnOpcionDos.setActionCommand(Acciones.IN_EMPLEADO);
 		btnOpcionDos.addActionListener(control);
 		btnOpcionTres.setActionCommand(Acciones.IN_ADMIN);

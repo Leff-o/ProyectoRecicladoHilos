@@ -31,7 +31,7 @@ public class PanelLoginAdmin extends JPanel{
 	Control Control;
 	
 	public PanelLoginAdmin() {
-		setBorder(new TitledBorder("Administrador"));
+		setBorder(new TitledBorder("CLIENTE"));
 		setBounds(570, 150, 160, 250);
 		setBackground(Color.WHITE);
 		setLayout(new FlowLayout());
@@ -47,15 +47,15 @@ public class PanelLoginAdmin extends JPanel{
 		logo.setBounds(50, 10, 85, 80);
 		logo.setIcon(new ImageIcon(imgEscudo.getImage().getScaledInstance(logo.getWidth(),logo.getHeight() ,Image.SCALE_SMOOTH)));
 
-		usuario=new JLabel("Usuario:");
+		usuario=new JLabel("NOMBRE :"+"\n");
 		usuario.setFont(new Font("OCR A Extended",Font.PLAIN,14));
 		txtUsuario=new JTextField(7);
 		
-		clave=new JLabel("Contraseña :"+"\n");
+		clave=new JLabel("CÉDULA :"+"\n");
 		clave.setFont(new Font("OCR A Extended",Font.PLAIN,14));
 		txtClave=new JPasswordField(7);
 
-		btniniciarSecion= new JButton("Iniciar Seción");
+		btniniciarSecion= new JButton("INGRESAR");
 		
 		
 	}
@@ -73,5 +73,21 @@ public class PanelLoginAdmin extends JPanel{
 	public void asignarLister(Control control) {
 		btniniciarSecion.setActionCommand(Acciones.LOGIN);
 		btniniciarSecion.addActionListener(control);
+	}
+
+	public JTextField getTxtUsuario() {
+		return txtUsuario;
+	}
+
+	public void setTxtUsuario(JTextField txtUsuario) {
+		this.txtUsuario = txtUsuario;
+	}
+
+	public JPasswordField getTxtClave() {
+		return txtClave;
+	}
+
+	public void setTxtClave(JPasswordField txtClave) {
+		this.txtClave = txtClave;
 	}
 }

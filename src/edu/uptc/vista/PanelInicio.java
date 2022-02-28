@@ -20,7 +20,7 @@ public class PanelInicio extends JPanel {
 	
 	public PanelInicio() {
 		setBorder(new TitledBorder("Menú"));
-		setBounds(290, 145, 160, 260);
+		setBounds(290, 145, 150, 260);
 		setBackground(Color.WHITE);
 		setLayout(null);
 		
@@ -30,17 +30,17 @@ public class PanelInicio extends JPanel {
 
 	private void inicializar() {
 		
-		btnCerrar = new JButton("Cerrar Seción");
+		btnCerrar = new JButton("VOLVER");
 		btnCerrar.setFont(new Font("Courier New",Font.PLAIN,14));
-		btnCerrar.setBounds(7, 30, 145, 25);
+		btnCerrar.setBounds(15, 30, 120, 25);
 		
-		btnEmpleado = new JButton("Empleado");
+		btnEmpleado = new JButton("VER ESTADO");
 		btnEmpleado.setFont(new Font("Courier New",Font.PLAIN,14));
-		btnEmpleado.setBounds(20, 110, 110, 25);
+		btnEmpleado.setBounds(15, 110, 120, 25);
 		
-		btnLibro = new JButton("Libro");
+		btnLibro = new JButton("TOMAR TURNO");
 		btnLibro.setFont(new Font("Courier New",Font.PLAIN,14));
-		btnLibro.setBounds(20, 190, 110, 25);
+		btnLibro.setBounds(15, 190, 125, 25);
 		
 		
 		
