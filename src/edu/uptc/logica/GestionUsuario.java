@@ -12,21 +12,15 @@ public class GestionUsuario{
 	}
 	
 	private void cargarDatos() {
-		Usuario cliente = new Usuario("Juan","56983");
+		Usuario cliente = new Usuario("Juan","56983",new Caja(5),2);
 		clientes.add(cliente);
-		cliente = new Usuario("José","12345");
-		clientes.add(cliente);
-		 cliente = new Usuario("Juan","78945");
-		clientes.add(cliente);
-	}
-	public String crearCliente(String[] datos) {
-		if(!datos[0].equals("")&& !datos[1].equals("")) {
-			Usuario cliente = new Usuario(datos[0],datos[1]);
-			clientes.add(cliente);
-			return "cliente guardado correctamente";
-		}else {
-			return "Existen campos vacíos";
-		}
+		Usuario cliente2 = new Usuario("Juan","123",new Caja(4),6);
+		clientes.add(cliente2);
+		Usuario cliente3 = new Usuario("Juan","999",new Caja(6),3);
+		clientes.add(cliente3);
+		Usuario cliente4 = new Usuario("Juan","777",new Caja(7),9);
+		clientes.add(cliente4);
+
 	}
 	public String[][] mostrarClientes(){
 		String[][] datos = new String[clientes.size()][8];
@@ -35,24 +29,6 @@ public class GestionUsuario{
 			datos[i][1]= clientes.get(i).getCedula();
 		}
 		return datos;
-	}
-	public String eliminarCliente(String posicion) {
-		if(Integer.parseInt(posicion)>= clientes.size()) {
-			return "cliente no encontrado";
-		}else {
-			clientes.remove(Integer.parseInt(posicion));
-			return"cliente eliminado correctamente";
-		}
-	}
-	public String modificarCliente(String [] entradas) {
-		int posicion = buscarPosicion(entradas[1]);
-		if(posicion !=-1) {
-			clientes.get(posicion).setNombre(entradas[0]);
-			clientes.get(posicion).setCedula(entradas[1]);
-			return "cliente modificado corretamente";
-		}else {
-			return "Error al modificar";
-		}
 	}
 	public int buscarPosicion(String apellido) {
 		for(int i=0; i<clientes.size();i++) {
